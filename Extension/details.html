@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Email Safety Report</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <style>
+      body {
+        background-color: #1f1f2f;
+        color: #ffffff;
+        padding: 20px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+      }
+
+      h1 {
+        color: #4fe3c1;
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 30px;
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+      }
+
+      .score.good {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .score.bad {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .score-label {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+
+      .table {
+        margin-top: 30px;
+        color: #fff;
+        font-size: 1.1rem;
+        text-align: left;
+      }
+
+      .table th, .table td {
+        vertical-align: middle;
+        padding: 15px;
+      }
+
+      .table-bordered {
+        border-color: #444;
+      }
+
+      .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #292b2f;
+      }
+
+      .badge {
+        font-size: 1.1rem;
+      }
+
+      .btn-large {
+        font-size: 1.25rem;
+        padding: 12px 25px;
+      }
+
+      .badge-danger {
+        background-color: #f44336;
+      }
+
+      .badge-warning {
+        background-color: #ff9800;
+      }
+
+      .badge-success {
+        background-color: #4caf50;
+      }
+
+      .badge-info {
+        background-color: #03a9f4;
+      }
+
+      .btn-back {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        margin-top: 20px;
+        display: block;
+        margin: 20px auto;
+      }
+
+      /* For focus states */
+      .focus-visible {
+        outline: 3px solid #4fe3c1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Email Safety Report</h1>
+
+    <!-- Score Section -->
+    <div class="score" id="score-circle">--%</div>
+    <p class="text-center score-label" id="result-label">Loading...</p>
+
+    <!-- External JS file (CSP safe) -->
+    <script src="details.js"></script>
+  </body>
+</html>

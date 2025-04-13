@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "MailSentinel",
+  "version": "1.0.0",
+  "description": "MailSentinel",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png"
+    },
+    "default_title": "MailSentinel View",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["storage", "alarms", "notifications", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
